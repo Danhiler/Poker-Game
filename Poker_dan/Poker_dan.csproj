@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF220278-CCA9-4DE1-AB8C-F160D35E1E74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Poker_dan</RootNamespace>
+    <AssemblyName>Poker_dan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Network\Client_ip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network\Client_ip.Designer.cs">
+      <DependentUpon>Client_ip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\gameFormNet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network\Client.cs" />
+    <Compile Include="logic\cashier.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="logic\card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gameform\gameform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gameform\gameform.Designer.cs">
+      <DependentUpon>gameform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logic\PlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="logic\PlayerControl.Designer.cs">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Network\Client_ip.resx">
+      <DependentUpon>Client_ip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logic\card.resx">
+      <DependentUpon>card.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gameform\gameform.resx">
+      <DependentUpon>gameform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logic\PlayerControl.resx">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Network\Server.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cards\0_0.bmp" />
+    <Content Include="cards\0_1.bmp" />
+    <Content Include="cards\0_2.bmp" />
+    <Content Include="cards\0_3.bmp" />
+    <Content Include="cards\10_0.bmp" />
+    <Content Include="cards\10_1.bmp" />
+    <Content Include="cards\10_2.bmp" />
+    <Content Include="cards\10_3.bmp" />
+    <Content Include="cards\11_0.bmp" />
+    <Content Include="cards\11_1.bmp" />
+    <Content Include="cards\11_2.bmp" />
+    <Content Include="cards\11_3.bmp" />
+    <Content Include="cards\12_0.bmp" />
+    <Content Include="cards\12_1.bmp" />
+    <Content Include="cards\12_2.bmp" />
+    <Content Include="cards\12_3.bmp" />
+    <Content Include="cards\1_0.bmp" />
+    <Content Include="cards\1_1.bmp" />
+    <Content Include="cards\1_2.bmp" />
+    <Content Include="cards\1_3.PNG" />
+    <Content Include="cards\2_0.bmp" />
+    <Content Include="cards\2_1.bmp" />
+    <Content Include="cards\2_2.bmp" />
+    <Content Include="cards\2_3.BMP" />
+    <Content Include="cards\3_0.bmp" />
+    <Content Include="cards\3_1.bmp" />
+    <Content Include="cards\3_2.bmp" />
+    <Content Include="cards\3_3.bmp" />
+    <Content Include="cards\4_0.bmp" />
+    <Content Include="cards\4_1.bmp" />
+    <Content Include="cards\4_2.bmp" />
+    <Content Include="cards\4_3.bmp" />
+    <Content Include="cards\5_0.bmp" />
+    <Content Include="cards\5_1.bmp" />
+    <Content Include="cards\5_2.bmp" />
+    <Content Include="cards\5_3.bmp" />
+    <Content Include="cards\6_0.bmp" />
+    <Content Include="cards\6_1.bmp" />
+    <Content Include="cards\6_2.bmp" />
+    <Content Include="cards\6_3.bmp" />
+    <Content Include="cards\7_0.bmp" />
+    <Content Include="cards\7_1.bmp" />
+    <Content Include="cards\7_2.bmp" />
+    <Content Include="cards\7_3.bmp" />
+    <Content Include="cards\8_0.bmp" />
+    <Content Include="cards\8_1.bmp" />
+    <Content Include="cards\8_2.bmp" />
+    <Content Include="cards\8_3.bmp" />
+    <Content Include="cards\9_0.bmp" />
+    <Content Include="cards\9_1.bmp" />
+    <Content Include="cards\9_2.bmp" />
+    <Content Include="cards\9_3.bmp" />
+    <Content Include="cards\card_off.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

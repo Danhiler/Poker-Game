@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Poker_dan">
+</Property><Property Name="Solution File" Value="C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan.sln">
+</Property><Property Name="Date" Value="יום רביעי 08 פברואר 2012">
+</Property><Property Name="Time" Value="16:12">
+</Property></Properties><Event ErrorLevel="0" Project="Poker_dan" Source="Poker_dan\Poker_dan.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Poker_dan" Source="Poker_dan\Poker_dan.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Poker_dan.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Poker_dan.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Poker_dan" Source="Poker_dan\Poker_dan.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

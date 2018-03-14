@@ -1,0 +1,553 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+
+using System.Windows.Forms;
+
+namespace Poker_dan
+{
+    class Game
+    {
+        Stack<Card> Hafisa;
+        Stack<Card> Hafisa_Cheat;
+        Random R;
+        bool[,] Flags = new bool[13, 4];
+        gameform Parent;
+
+        public Game(gameform Parent)
+        {
+            this.Parent = Parent;
+            R = new Random();
+            Init();
+        }
+
+        public void Init()
+        {
+            Hafisa = new Stack<Card>();
+            //cheat
+            Hafisa_Cheat = new Stack<Card>();
+            Hafisa_Cheat.Push(new Card(Parent, 0, (Suit)0));
+            Hafisa_Cheat.Push(new Card(Parent, 9, (Suit)0));
+            Hafisa_Cheat.Push(new Card(Parent, 10, (Suit)1));
+            Hafisa_Cheat.Push(new Card(Parent, 9, (Suit)1));
+            Hafisa_Cheat.Push(new Card(Parent, 7, (Suit)0));
+            Hafisa_Cheat.Push(new Card(Parent, 5, (Suit)2));
+            Hafisa_Cheat.Push(new Card(Parent, 7, (Suit)3));
+            //end cheat
+            int num;
+            Suit kind;
+            for (int i = 0; i < 52; i++)
+            {
+                do
+                {
+                    num = R.Next(13);
+                    kind = (Suit)R.Next(4);
+                } while (Flags[num, (int)kind]);
+                Flags[num, (int)kind] = true;
+                Hafisa.Push(new Card(Parent, num, kind));
+            }
+            DealForUser();
+            Flop();
+
+        }
+
+
+        public void Delete()
+        {
+            Hafisa.Clear();
+            Parent.PanelTable.Controls.Clear();
+            Parent.panelUser1.Controls.Clear();
+            Flags = new bool[13, 4];
+        }
+
+
+        private void Flop()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Card card = Hafisa.Pop();
+                card.Show();
+                card.Location = new System.Drawing.Point(5 + i * (Card.WIDTH + 5), 5);
+                Parent.PanelTable.Controls.Add(card);
+
+            }
+        }
+        public void Turn()
+        {
+            Card card = Hafisa.Pop();
+            card.Show();
+            card.Location = new System.Drawing.Point(5 + 3 * (Card.WIDTH + 5), 5);
+            Parent.PanelTable.Controls.Add(card);
+
+
+        }
+        public void River()
+        {
+            Card card = Hafisa.Pop();
+            card.Show();
+            card.Location = new System.Drawing.Point(5 + 4 * (Card.WIDTH + 5), 5);
+            Parent.PanelTable.Controls.Add(card);
+
+        }
+        private void DealForUser()
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                Card card = Hafisa.Pop();
+                card.Show();
+                card.Location = new System.Drawing.Point(5 + i * (Card.WIDTH + 5), 5);
+                Parent.panelUser1.Controls.Add(card);
+                
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Card card = Hafisa.Pop();
+                card.Show();
+                card.Location = new System.Drawing.Point(5 + i * (Card.WIDTH + 5), 5);
+                Parent.panelUser2.Controls.Add(card);
+
+            }
+        }
+        public List<Card> GetHand()
+        {
+            List<Card> Hand = new List<Card>();
+            foreach (Card c in Parent.panelUser1.Controls)
+                Hand.Add(c);
+            foreach (Card c in Parent.PanelTable.Controls)
+                Hand.Add(c);
+            return Hand;
+        }
+        public int BestHand(Panel panelUser)
+        {
+            int  First;
+            //List<Card> Second = new List<Card>();
+            List<Card> Hand = new List<Card>();
+            foreach (Card c in panelUser.Controls)
+                Hand.Add(c);
+            foreach (Card c in Parent.PanelTable.Controls)
+                Hand.Add(c);
+               First = GetFirst(Hand);
+               //Second = GetSecond(Hand, First);
+            
+             
+            
+            return First;
+        }
+        
+        public int GetFirst(List<Card> hand)
+        {
+            if (Is_Straight_Flush(hand))
+                return 9;
+            if (Is_Four_Of_A_Kind(hand))
+                return 8;
+            if (Is_Full_House(hand))
+                return 7;
+            if (Is_Flush(hand))
+                return 6;
+            if (Is_Straight(hand))
+                return 5;
+            if (Is_Tree_Of_A_Kind(hand))
+                return 4;
+            if (Is_Two_Pairs(hand))
+                return 3;
+            if (Is_Pair(hand))
+                return 2;
+            return 1;
+        }
+        private bool Is_Pair(List<Card> hand)
+        {
+
+            for (int i = 0; i < (hand.Count-1); i++)
+                for (int j = i+1; j < (hand.Count); j++)
+                    if(hand[i]!=null &&hand[j]!=null)
+                    if (hand[i].num == hand[j].num)
+                        return true;
+            return false;
+        }
+        private bool Is_Two_Pairs(List<Card> hand)
+        {
+            int mone = 0;
+            for (int i = 0; i < (hand.Count - 1); i++)
+                for (int j = i + 1; j < (hand.Count ); j++)
+                    if (hand[i] != null && hand[j] != null)
+                        if (hand[i].num == hand[j].num)
+                            mone++;
+            if (mone >= 2)
+                return true;
+
+            return false;
+        }
+        private bool Is_Tree_Of_A_Kind(List<Card> hand)
+        {
+            for (int i = 0; i < (hand.Count - 2); i++)
+                for (int j = i + 1; j < (hand.Count-1); j++)
+                    for (int q = j + 1; q < (hand.Count); q++)
+                    if ((hand[i] != null) && (hand[j] != null) && (hand[q] !=null))
+                      if ((hand[i].num == hand[j].num) && (hand[j].num== hand[q].num))
+                            return true;
+            return false;
+
+        }
+        private bool Is_Straight(List<Card> hand)
+        {
+            int mone = 0;
+            bool[] mz = new bool[13];
+            for (int i = 0; i < hand.Count; i++)
+                if (hand[i] != null)
+                    mz[hand[i].num] = true;
+            for (int j = 0; j < 13; j++)
+            {
+                if (mz[j] == true) mone++;
+                if (mone == 5) return true;
+                if (mz[j] == false) mone = 0;
+            }
+            if ((mz[0] == true) && (mone == 4)) return true;
+                return false;
+            }
+        private bool Is_Flush(List<Card> hand)
+        {
+            int []mm = new int [4];
+            for (int i = 0; i < hand.Count ; i++)
+                if (hand[i] != null)
+                     mm[(int)hand[i].kind]++;
+            for (int i = 0; i < 4; i++)
+                if (mm[i] >= 5) return true;
+            return false;
+
+        }//Erors
+        private bool Is_Full_House(List<Card> hand)
+        {
+            if (!Is_Tree_Of_A_Kind(hand)) return false;
+            bool flag = true;
+            List<Card> TempHand = new List<Card>();
+            foreach (Card c in hand)
+                TempHand.Add(c);
+                for (int i = 0; i < (TempHand.Count - 2)&&flag; i++)
+                    for (int j = i + 1; j < (TempHand.Count - 1) && flag; j++)
+                        for (int q = j + 1; q < (TempHand.Count) && flag; q++)
+                            if ((TempHand[i] != null )&&(TempHand[j] !=null)&&( TempHand[q]!=null))
+                            if ((TempHand[i].num == TempHand[j].num) && (TempHand[j].num == TempHand[q].num))
+                            {
+                                TempHand[i] = null;
+                                TempHand[j] = null;
+                                TempHand[q] = null;
+                                flag = false;
+                            }
+                return Is_Pair(TempHand);
+            
+            
+
+        }//Erors
+        private bool Is_Four_Of_A_Kind(List<Card> hand)
+        {
+            for (int i = 0; i < (hand.Count - 3); i++)
+                for (int j = i + 1; j < (hand.Count - 2); j++)
+                    for (int q = j + 1; q < (hand.Count - 1); q++)
+                        for (int p = q + 1; p < (hand.Count); p++)
+                            if ((hand[i] != null) && (hand[j] != null) && (hand[q] != null))
+                                if ((hand[i].num == hand[j].num) && (hand[j].num == hand[q].num) && (hand[q].num == hand[p].num))
+                                    return true;
+            return false;
+        }
+        private bool Is_Straight_Flush(List<Card> hand)
+        {
+            int fkind=0;;
+            if (!Is_Flush(hand))
+                return false;
+           
+           int []mm= new int [4];
+            for (int i = 0; i < hand.Count; i++)
+                mm[(int)hand[i].kind]++;
+
+            for (int i = 0; i < 4;i++)//put in fkind the kind of the flush
+               if(fkind < mm[i])
+            fkind = i;
+            List<Card> TempHand = new List<Card>();
+            foreach (Card c in hand)
+                TempHand.Add(c);
+
+            for (int i = 0; i < TempHand.Count; i++)
+                if ((int)TempHand[i].kind != fkind)
+                    TempHand[i] = null;
+            return (Is_Straight(TempHand));
+
+
+        }
+
+        public List<int> GetSecond(List<Card> hand,int First)
+        {
+            List<int> second = new List<int>();
+            int max= -1;
+            bool flag = true;
+            switch (First)
+            {
+                #region 1
+                case 1:
+                     
+                    for (int j = 0; j < hand.Count; j++)
+                    {
+                        max = -1;
+                        for (int i = 0; i < hand.Count; i++)
+                            if (hand[i] != null)
+                            {
+                                if (hand[i].num == 0) max = 0;
+                                if ((hand[i].num > max)&&(max!=0))
+                                    max = hand[i].num;
+                                
+                            }
+                        for (int i = 0; i < hand.Count; i++)
+                            if (hand[i] != null && hand[i].num == max)
+                                hand[i] = null;
+                        second.Add(max);
+                    }
+                    break;
+                #endregion
+                #region 2
+                case 2:
+                    max = -1;
+                    for (int i = 0; i < (hand.Count - 1); i++)
+                        for (int j = i + 1; j < hand.Count; j++)
+                            if ((hand[i] != null) && (hand[j] != null))
+                            {
+                                if (hand[i].num == hand[j].num)
+                                {
+                                    second.Add(hand[i].num);
+                                    hand[i] = null;
+                                    hand[j] = null;
+                                }
+                            }
+
+                                    
+                               
+                     
+                    for (int j = 0; j < hand.Count; j++)
+                    {
+                        max = -1;
+                        for (int i = 0; i < hand.Count; i++)
+                            if (hand[i] != null)
+                            {
+                                if (hand[i].num == 0) max = 0; 
+                                if ((hand[i].num > max)&&(max!=0))
+                                    max = hand[i].num;
+                            }
+
+                        for (int i = 0; i < hand.Count; i++)
+                            if (hand[i] != null && hand[i].num == max)
+                                hand[i] = null;
+                        second.Add(max);
+                    }
+                    break;
+                #endregion
+                #region 3
+                case 3:
+                    int max2=-2;
+                    flag = true;
+                    for (int i = 0; i < (hand.Count - 1) && flag; i++)
+                        for (int j = i + 1; j < hand.Count && flag; j++)
+                            if ((hand[i]!=null) &&( hand[j]!=null))
+                            if (hand[i].num == hand[j].num)
+                            {
+                                if (max2 == -2)
+                                    max2 = hand[i].num;
+                                else
+                                    max = hand[i].num;
+                                hand[i] = null;
+                                hand[j] = null;
+                            }
+                    
+                     if ((max > max2) || (max ==0))
+                    {
+                        if (max2 == 0)
+                        {
+                            second.Add(max2);
+                            second.Add(max);
+                        }
+
+                        second.Add(max);
+                        second.Add(max2);
+                    }
+                    else 
+                    {
+                        second.Add(max2);
+                        second.Add(max);
+                    }
+                    max=-1;
+                    for (int i = 0; i < hand.Count; i++)
+                        if (hand[i] != null)
+                        {
+                            if (hand[i].num == 0)
+                                max = 0;
+                            
+                            if ((hand[i].num > max)&&(max!=0))
+
+                                max = hand[i].num;
+                        }
+                            
+                                
+                            
+                    second.Add(max);
+                    break;
+                #endregion
+                #region 4
+                case 4:
+                    flag = true;
+                    for (int i = 0; i < (hand.Count - 2) && flag; i++)
+                        for (int j = i + 1; j < (hand.Count - 1) && flag; j++)
+                            for (int q = j + 1; q < (hand.Count) && flag; q++)
+                                if ((hand[i] != null) && (hand[j] != null) && (hand[q] != null))
+                                    if ((hand[i].num == hand[j].num) && (hand[j].num == hand[q].num)){
+                                        second.Add(hand[i].num);
+                                        hand[i]= null;
+                                        hand[j]=null;
+                                        hand[q]=null;
+                                    }
+                    max=-1;
+                    max2=-2;
+                    for (int i = 0; i < hand.Count; i++)
+                        if (hand[i] != null)
+                            if (hand[i].num > max2)
+                                if (max < hand[i].num)
+                                {
+                                    max = hand[i].num;
+                                    hand[i] = null;
+                                }
+                                else
+                                {
+                                    max2 = hand[i].num;
+                                    hand[i] = null;
+                                }
+                    second.Add(max);
+                    second.Add(max2);
+                                    break;
+#endregion
+                #region 5
+                case 5:
+                                    bool[] mz = new bool[13];
+                                    for (int i = 0; i < hand.Count; i++)
+                                        if (hand[i] != null)
+                                        {
+                                            if (mz[hand[i].num] == true)
+                                                hand[i] = null;
+                                           if(hand[i]!=null) mz[hand[i].num] = true;
+                                        }
+                                            
+                                     int mone = 0;
+                    //if(mz[0] == true)mone++;
+                    for(int i=0;i<13;i++)
+                        if(mz[i] ==true)
+                        {
+                            mone++;
+                            if(mone ==5)
+                                for(int j=0;j<5;j++)
+                                    second.Add(i-j);
+                        }
+                        else
+                            mone=0;
+                    if ((mone == 4) && (mz[0] == true))
+                        second.Add(0);
+
+                                    break;
+
+                #endregion
+                #region 6,9
+                case 6:
+                case 9:
+                                   
+                    int maxkind=-1;
+                                    int[] mm = new int[4];
+                                    for (int i = 0; i < hand.Count; i++)
+                                        mm[(int)hand[i].kind]++;
+                                    for (int i = 0; i < 4; i++)
+                                        if (mm[i] >= 5)
+                                            maxkind = i;
+                                    for (int i = 0; i < hand.Count; i++)
+                                        if ((int)hand[i].kind != maxkind)
+                                            hand[i] = null;
+                                    for (int j = 0; j < hand.Count; j++)
+                                    {
+                                        max = -1;
+                                        for (int i = 0; i < hand.Count; i++)
+                                            if (hand[i] != null)
+                                            {
+                                                if ((hand[i].num > max))
+                                                    max = hand[i].num;
+                                                if (hand[i].num == 0) { second.Add(0); hand[i] = null; }
+                                            }
+                                        for (int i = 0; i < hand.Count; i++)
+                                            if (hand[i] != null && hand[i].num == max)
+                                                hand[i] = null;
+                                        second.Add(max);
+                                    }
+                                    break;
+                #endregion
+                #region 7
+                case 7:
+                                    flag = true;
+                                    int hightree = -1;
+                    for (int i = 0; i < (hand.Count - 2)&&flag; i++)
+                                        for (int j = i + 1; j < (hand.Count - 1)&&flag; j++)
+                                            for (int q = j + 1; q < (hand.Count)&&flag; q++)
+                                                    if ((hand[i].num == hand[j].num) && (hand[j].num == hand[q].num))
+                                                        if (hand[i].num > hightree)
+                                                            hightree = hand[i].num;
+                    for (int i = 0; i < hand.Count; i++)
+                        if (hand[i].num == hightree)
+                            hand[i] = null;
+                    second.Add(hightree);                                                                  
+                                                    
+                    flag = true;
+                    for (int i = 0; i < (hand.Count - 2) && flag; i++)
+                        for (int j = i + 1; j < (hand.Count - 1) && flag; j++)
+                            if((hand[i]!=null)&&(hand[j]!=null))
+                            if (hand[i].num == hand[j].num)
+                            {
+                                second.Add(hand[i].num);
+                                hand[i] = null;
+                                hand[j] = null;
+                            }
+                                    break;
+                #endregion
+                #region 8
+                case 8:
+                                    flag = true;
+                                    for (int i = 0; i < (hand.Count - 3)&&flag; i++)
+                                        for (int j = i + 1; j < (hand.Count - 2) && flag; j++)
+                                            for (int q = j + 1; q < (hand.Count - 1) && flag; q++)
+                                                for (int p = q + 1; p < (hand.Count) && flag; p++)
+                                                    if ((hand[i].num == hand[j].num) && (hand[j].num == hand[q].num) && (hand[q].num == hand[p].num))
+                                                    {
+                                                        second.Add(hand[i].num);
+                                                        hand[i] = null;
+                                                        hand[j] = null;
+                                                        hand[q] = null;
+                                                        hand[p] = null;
+                                                        flag = false;
+                                                    }
+                                    max = -1;
+                                    for (int i = 0; i < hand.Count; i++)
+                                        if (hand[i] != null)
+                                        {
+                                            if ((hand[i].num > max))
+                                                max = hand[i].num;
+                                            if (hand[i].num == 0) { second.Add(0); hand[i] = null; }
+                                        }
+                                    second.Add(max);
+
+
+                                    break;
+                #endregion
+//case 9 is in case 6
+
+
+
+            }
+            return second;
+        }
+    }
+}

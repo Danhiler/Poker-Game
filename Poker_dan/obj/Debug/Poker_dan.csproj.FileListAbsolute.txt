@@ -1,0 +1,109 @@
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Documents and Settings\user10\My Documents\Visual Studio 2008\Projects\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Card.resources
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Card.resources
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+G:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+G:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Card.resources
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Documents and Settings\user1\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+C:\Documents and Settings\Dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+C:\Documents and Settings\user10\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+F:\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Card.resources
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+F:\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+F:\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+F:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.NetworkGameForm.resources
+E:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+E:\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Card.resources
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Card.resources
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Documents and Settings\user10\שולחן העבודה\Poker_dan\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Client_ip.resources
+C:\Users\dan\Desktop\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Options.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.Client_ip.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.Card.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.Options.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Users\dan\Desktop\Poker_dan - עותק\Poker_dan\obj\Debug\Poker_dan.csproj.GenerateResource.Cache
+C:\Users\dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.exe
+C:\Users\dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.pdb
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\bin\Debug\Poker_dan.exe
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\bin\Debug\Poker_dan.pdb
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Client_ip.resources
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Card.resources
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.menu.resources
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.gameform.resources
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.PlayerControl.resources
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Options.resources
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\Poker_dan.Properties.Resources.resources
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Dan\Desktop\school\מחשבים\Poker_dan\Poker_dan\obj\Debug\GenerateResource.write.1.tlog
